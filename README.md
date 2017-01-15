@@ -19,6 +19,10 @@ This will install the service with a "Manual" startup type. You can start the se
 
 A client console app is provided to test the service. After the service is installed, run `testclient.exe` without arguments. This will query the service version (which is hardcoded to 1.0.0). The call will cause the service to start automatically (when it's not yet started).
 
+### Testing service notification
+
+The service can also notify clients of events via IDispatch. To test, run `testclient.exe event`. The client will send a value to the service and in return, the service will notify the client of the received value.
+
 ### Uninstallation
 
 ```
