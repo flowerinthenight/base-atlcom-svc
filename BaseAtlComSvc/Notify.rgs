@@ -1,0 +1,28 @@
+HKCR
+{
+    BaseAtlComSvc.Notify.1 = s 'Notify Class'
+	{
+		CLSID = s '{C6C3DE81-67BC-4694-9274-03F49426ABB0}'
+	}
+	BaseAtlComSvc.Notify = s 'Notify Class'
+	{
+		CLSID = s '{C6C3DE81-67BC-4694-9274-03F49426ABB0}'
+		CurVer = s 'BaseAtlComSvc.Notify.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C6C3DE81-67BC-4694-9274-03F49426ABB0} = s 'Notify Class'
+		{
+            ProgID = s 'BaseAtlComSvc.Notify.1'
+			VersionIndependentProgID = s 'BaseAtlComSvc.Notify'
+			ForceRemove Programmable
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+            val AppID = s '%APPID%'
+			TypeLib = s '{44D1FD4A-A21A-47F6-A339-713508520CD7}'
+			Version = s '1.0'
+		}
+	}
+}

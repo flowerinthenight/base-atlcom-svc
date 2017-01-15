@@ -2,11 +2,11 @@ HKCR
 {
     BaseAtlComSvc.SvcVersion.1 = s 'SvcVersion Class'
 	{
-		CLSID = s '{F3441EA7-8641-4B88-BD8E-A9A83C70BA44}'
+		CLSID = s '{05F12D72-A394-4FED-A515-B723CC9D1EBE}'
 	}
 	BaseAtlComSvc.SvcVersion = s 'SvcVersion Class'
 	{
-		CLSID = s '{F3441EA7-8641-4B88-BD8E-A9A83C70BA44}'
+		CLSID = s '{05F12D72-A394-4FED-A515-B723CC9D1EBE}'
 		CurVer = s 'BaseAtlComSvc.SvcVersion.1'
 	}
 	NoRemove CLSID

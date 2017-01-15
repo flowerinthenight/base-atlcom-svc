@@ -92,7 +92,6 @@ HRESULT CBaseAtlComSvcModule::PostMessageLoop()
 void CBaseAtlComSvcModule::Handler(DWORD dwOpcode)
 {
     wchar_t m[MAX_PATH];
-
     StringCchPrintf(m, MAX_PATH, L"ControlCode: %d", dwOpcode);
     EventWriteInfoW(M, FL, FN, m);
 

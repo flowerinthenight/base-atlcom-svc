@@ -37,6 +37,9 @@
     <ClCompile Include="SvcVersion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Notify.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -63,6 +66,12 @@
     <ClInclude Include="SvcVersion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="_INotifyEvents_CP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BaseAtlComSvc.rc">
@@ -74,6 +83,9 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="SvcVersion.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Notify.rgs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

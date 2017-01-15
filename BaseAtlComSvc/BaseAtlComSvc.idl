@@ -18,6 +18,16 @@ interface ISvcVersion : IDispatch {
     [id(1)] HRESULT GetVersion([out] LONG *pMajor, [out] LONG *pMinor, [out] LONG *pRev);
 };
 [
+	object,
+	uuid(957CE93B-62E9-4174-8E23-49F3BB27FE26),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface INotify : IDispatch {
+    [id(1)] HRESULT SetNotifyValue([in] ULONG lValue);
+};
+[
     uuid(44D1FD4A-A21A-47F6-A339-713508520CD7),
     version(1.0),
 ]
@@ -31,6 +41,7 @@ library BaseAtlComSvcLib
 	{
 		properties:
 		methods:
+            [id(1)] void NotifyValueUpdated([in] ULONG NewValue,[in,out] VARIANT_BOOL* Cancel);
 	};
 	[
 		uuid(05F12D72-A394-4FED-A515-B723CC9D1EBE)		
@@ -39,5 +50,21 @@ library BaseAtlComSvcLib
 	{
 		[default] interface ISvcVersion;
 		[default, source] dispinterface _ISvcVersionEvents;
+	};
+	[
+		uuid(DB021548-0779-4156-BE34-AF435947D268)		
+	]
+	dispinterface _INotifyEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(C6C3DE81-67BC-4694-9274-03F49426ABB0)		
+	]
+	coclass Notify
+	{
+		[default] interface INotify;
+		[default, source] dispinterface _INotifyEvents;
 	};
 };
