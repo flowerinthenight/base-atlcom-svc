@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/0ivg77ha322fam9u/branch/master?svg=true)](https://ci.appveyor.com/project/flowerinthenight/base-atlcom-svc/branch/master)
+
 # Overview
 
 Skeleton code for an ATL-based Windows service. Basically the same as a [traditional Windows service](https://github.com/flowerinthenight/win32-base-service) but with some advantages.
