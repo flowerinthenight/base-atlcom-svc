@@ -21,6 +21,10 @@ This will install the service with a "Manual" startup type. You can start the se
 BaseAtlComSvc.exe /unregserver
 ```
 
+### ETW trace
+
+This project uses the ETW setup [here](https://github.com/flowerinthenight/win32-etw-manifest).
+
 # License
 
 [The MIT License](./LICENSE.md)
