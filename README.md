@@ -21,7 +21,7 @@ A client console app is provided to test the service. After the service is insta
 
 ### Testing service notification
 
-The service can also notify clients of events via IDispatch. To test, run `testclient.exe event`. The client will send a value to the service and in return, the service will notify the client of the received value.
+The service can also notify clients of events via IDispatch. To test, run `testclient.exe event`. The client will send a value to the service and in return, the service will notify the client of the received value. The call will also cause the service to start automatically (when it's not yet started).
 
 ### Uninstallation
 
