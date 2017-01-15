@@ -15,6 +15,10 @@ BaseAtlComSvc.exe /service
 
 This will install the service with a "Manual" startup type. You can start the service manually or by command prompt or from a client app.
 
+### Using the test client
+
+A client console app is provided to test the service. After the service is installed, run `testclient.exe` without arguments. This will query the service version (which is hardcoded to 1.0.0). The call will cause the service to start automatically (when it's not yet started).
+
 ### Uninstallation
 
 ```
