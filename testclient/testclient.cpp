@@ -116,8 +116,7 @@ public:
         HRESULT hr = S_OK;
         VARIANT_BOOL bTrue = VARIANT_TRUE;
 
-        if (pDispParams)
-        {
+        if (pDispParams) {
             switch (dispIdMember) {
             case 1:
                 return NotifyUpdated(pDispParams->rgvarg[1].ulVal, &bTrue);
