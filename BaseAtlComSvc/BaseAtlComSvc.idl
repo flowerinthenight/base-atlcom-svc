@@ -1,0 +1,43 @@
+// BaseAtlComSvc.idl : IDL source for BaseAtlComSvc
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (BaseAtlComSvc.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(34E1B687-CCCE-4AC4-A91D-C0FF0AA57EBB),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ISvcVersion : IDispatch {
+    [id(1)] HRESULT GetVersion([out] LONG *pMajor, [out] LONG *pMinor, [out] LONG *pRev);
+};
+[
+    uuid(44D1FD4A-A21A-47F6-A339-713508520CD7),
+    version(1.0),
+]
+library BaseAtlComSvcLib
+{
+    importlib("stdole2.tlb");
+	[
+		uuid(0C04C14F-ACF5-4F3A-BB5C-2B9628C17AEF)		
+	]
+	dispinterface _ISvcVersionEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(05F12D72-A394-4FED-A515-B723CC9D1EBE)		
+	]
+	coclass SvcVersion
+	{
+		[default] interface ISvcVersion;
+		[default, source] dispinterface _ISvcVersionEvents;
+	};
+};

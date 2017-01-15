@@ -1,0 +1,9 @@
+.vs/
+x64/
+ipch/
+BaseAtlComSvc/x64/
+obj/
+*.vcxproj.user
+*.opendb
+*.db
+*.pdb

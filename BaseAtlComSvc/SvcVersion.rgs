@@ -1,0 +1,28 @@
+HKCR
+{
+    BaseAtlComSvc.SvcVersion.1 = s 'SvcVersion Class'
+	{
+		CLSID = s '{F3441EA7-8641-4B88-BD8E-A9A83C70BA44}'
+	}
+	BaseAtlComSvc.SvcVersion = s 'SvcVersion Class'
+	{
+		CLSID = s '{F3441EA7-8641-4B88-BD8E-A9A83C70BA44}'
+		CurVer = s 'BaseAtlComSvc.SvcVersion.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {05F12D72-A394-4FED-A515-B723CC9D1EBE} = s 'SvcVersion Class'
+		{
+            ProgID = s 'BaseAtlComSvc.SvcVersion.1'
+			VersionIndependentProgID = s 'BaseAtlComSvc.SvcVersion'
+			ForceRemove Programmable
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+            val AppID = s '%APPID%'
+			TypeLib = s '{44D1FD4A-A21A-47F6-A339-713508520CD7}'
+			Version = s '1.0'
+		}
+	}
+}

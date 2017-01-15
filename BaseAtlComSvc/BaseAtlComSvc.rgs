@@ -1,0 +1,28 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'BaseAtlComSvc'
+		'BaseAtlComSvc.exe'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}
+
+HKLM
+{
+	SYSTEM
+	{
+		CurrentControlSet
+		{
+			Services
+			{
+				BaseAtlComSvc
+				{
+					val 'Description' = s 'Base ATL Com Service'
+				}
+			}
+		}
+	}	
+}
